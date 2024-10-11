@@ -1,0 +1,136 @@
+/* 全局样式 */
+body {
+    background: #fff;
+    color: #333;
+    font-family: 'Noto Serif SC', "SimSun", "STSong", serif; /* 使用思源宋體並備用宋體 */
+    line-height: 1.8;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+    font-size: 30px;
+    counter-reset: h1;
+}
+
+p.large-text{
+    font-family: 'Noto Serif SC', "SimSun", "STSong", serif; /* 使用思源宋體並備用宋體 */
+    font-weight: bold; /* 设置为粗体 */
+    font-size: 35px; /* 可以根据需要调整大小 */
+    line-height: 1.8;
+    color: #333; /* 字体颜色 */
+    text-shadow: 2px 2px 2px rgba(86, 78, 127, 0.1); /* 添加轻微的磨砂效果，类似阴影 */
+    margin: 20px 0; /* 调整段落间距，使页面更美观 */
+}
+p.light-box {
+    border: 2px solid #d3d3d3; /* 浅灰色边框 */
+    padding: 10px; /* 内边距 */
+    border-radius: 5px; /* 边角圆滑 */
+    background-color: #f9f9f9; /* 浅色背景 */
+    width: fit-content; /* 根据内容调整宽度 */
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+    color: #8c2424; /* 标题使用深蓝色 */
+    text-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5); /* 轻微的文字阴影 */
+}
+
+img.imgc {
+    height: 2em;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* 增加悬停时的缩放效果 */
+}
+img.imgc:hover {
+    transform: scale(2); /* 悬停时图片稍微放大 */
+}
+
+
+  /* 一级标题 */
+  h1 {
+    counter-reset: h2; /* 遇到新的 h1 时重置 h2 计数器 */
+    counter-increment: h1;
+  }
+  h1::before {
+    content: counter(h1) " ";
+  }
+  
+  /* 二级标题 */
+  h2 {
+    counter-reset: h3; /* 遇到新的 h2 时重置 h3 计数器 */
+    counter-increment: h2;
+  }
+  h2::before {
+    content: counter(h1) "." counter(h2) " ";
+  }
+  
+  /* 三级标题 */
+  h3 {
+    counter-increment: h3;
+  }
+  h3::before {
+    content: counter(h1) "." counter(h2) "." counter(h3) " ";
+  }
+
+/* 块引用样式 */
+blockquote {
+    background-color: #f0f0f0;
+    border-left: 6px solid #49206e;
+    padding: 10px 20px;
+    margin: 20px 0;
+    color: #49206e;
+    border-radius: 20px;
+}
+
+/* 脚注的樣式 */
+.footnote {
+    color: #3e648d; /* 文字颜色保持藍色，簡單且明亮 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    position: relative;
+    font-size: 0.8em; /* 缩小脚注的字体 */
+    vertical-align: super; /* 上标效果 */
+    line-height: 1; /* 调整行高以配合上标 */
+}
+
+/* 使用class提高特異性 */
+ol li{
+    margin: 0; /* 移除列表外边距，使列表紧贴容器 */
+    color: #8c2424; /* 設置你想要的顏色 */
+    border-radius: 5px; /* 所有角的半徑設為 10px */
+}
+
+ul li{
+    margin: 0; /* 移除列表外边距，使列表紧贴容器 */
+    color: #8c2424; /* 設置你想要的顏色 */
+    border-radius: 5px; /* 所有角的半徑設為 10px */
+}
+
+
+/* 鼠標懸停效果 */
+ol li:hover {
+    background-color: #fcf5f5;
+    box-shadow: 5px 0px 5px rgba(62, 92, 144, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #fcf5f5;
+    box-shadow: 5px 0px 5px rgba(62, 92, 144, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.box-wrapper {
+    border: 2px solid #d3d3d3; /* 浅灰色边框 */
+    padding: 0px 10px; /* 内边距 */
+    border-radius: 10px; /* 边角圆滑 */
+    background-color: #f9f9f9; /* 浅色背景 */
+    width: fit-content; /* 根据内容调整宽度 */
+}
+
+
+
+
+
+
+
+
+
+
