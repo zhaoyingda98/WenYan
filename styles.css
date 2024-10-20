@@ -1,0 +1,204 @@
+/* 全局样式 */
+body {
+    background: #fff;
+    color: #333;
+    font-family: 'Noto Serif SC', "SimSun", "STSong", serif; /* 使用思源宋體並備用宋體 */
+    line-height: 1.8;
+    padding: 0 5px;
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+    font-size: 27px;
+    counter-reset: h1;
+}
+body *:not([lang="zh"]) {
+  font-family: "Times New Roman", Times, serif;
+}
+
+p.large-text{
+    font-family: 'Noto Serif SC', "SimSun", "STSong", serif; /* 使用思源宋體並備用宋體 */
+    font-weight: bold; /* 设置为粗体 */
+    font-size: 35px; /* 可以根据需要调整大小 */
+    line-height: 1.8;
+    color: #333; /* 字体颜色 */
+    text-shadow: 2px 2px 2px rgba(86, 78, 127, 0.1); /* 添加轻微的磨砂效果，类似阴影 */
+    margin: 20px 0; /* 调整段落间距，使页面更美观 */
+}
+p.light-box {
+    border: 2px solid #d3d3d3; /* 浅灰色边框 */
+    padding: 10px; /* 内边距 */
+    border-radius: 5px; /* 边角圆滑 */
+    background-color: #f9f9f9; /* 浅色背景 */
+    width: fit-content; /* 根据内容调整宽度 */
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+    color: #8c2424; /* 标题使用深蓝色 */
+    text-shadow: 2px 2px 5px rgba(200, 200, 200, 0.5); /* 轻微的文字阴影 */
+}
+
+img.imgc {
+    height: 2em;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* 增加悬停时的缩放效果 */
+}
+img.imgc:hover {
+    transform: scale(2); /* 悬停时图片稍微放大 */
+}
+
+
+  /* 一级标题 */
+  h1 {
+    counter-reset: h2; /* 遇到新的 h1 时重置 h2 计数器 */
+    counter-increment: h1;
+  }
+  h1::before {
+    content: counter(h1) " ";
+  }
+  
+  /* 二级标题 */
+  h2 {
+    counter-reset: h3; /* 遇到新的 h2 时重置 h3 计数器 */
+    counter-increment: h2;
+  }
+  h2::before {
+    content: counter(h1) "." counter(h2) " ";
+  }
+  
+  /* 三级标题 */
+  h3 {
+    counter-increment: h3;
+  }
+  h3::before {
+    content: counter(h1) "." counter(h2) "." counter(h3) " ";
+  }
+
+/* 块引用样式 */
+blockquote {
+    background-color: #f0f0f0;
+    border-left: 6px solid #49206e;
+    padding: 10px 20px;
+    margin: 20px 0;
+    color: #49206e;
+    border-radius: 20px;
+}
+
+/* 脚注的樣式 */
+.footnote {
+    color: #3e648d; /* 文字颜色保持藍色，簡單且明亮 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+    position: relative;
+    font-size: 0.8em; /* 缩小脚注的字体 */
+    vertical-align: super; /* 上标效果 */
+    line-height: 1; /* 调整行高以配合上标 */
+}
+
+/* 使用class提高特異性 */
+ol li{
+    margin: 0; /* 移除列表外边距，使列表紧贴容器 */
+    color: #8c2424; /* 設置你想要的顏色 */
+    border-radius: 5px; /* 所有角的半徑設為 10px */
+}
+
+ul li{
+    margin: 0; /* 移除列表外边距，使列表紧贴容器 */
+    color: #8c2424; /* 設置你想要的顏色 */
+    border-radius: 5px; /* 所有角的半徑設為 10px */
+}
+
+
+/* 鼠標懸停效果 */
+ol li:hover {
+    background-color: #fcf5f5;
+    box-shadow: 5px 0px 5px rgba(62, 92, 144, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #fcf5f5;
+    box-shadow: 5px 0px 5px rgba(62, 92, 144, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.box-wrapper {
+    border: 2px solid #d3d3d3; /* 浅灰色边框 */
+    padding: 0px 10px; /* 内边距 */
+    border-radius: 10px; /* 边角圆滑 */
+    background-color: #f9f9f9; /* 浅色背景 */
+    width: fit-content; /* 根据内容调整宽度 */
+}
+
+/* 現代美觀的 CSS 用於 header 和 footer */
+
+header {
+  background-color: #fff; /* 淺色背景 */
+  color: #8c2424; /* 字體顏色為深色 */
+  font-family: '隶书', 'SimLi', serif !important;/* 设置字体为隶书，并添加常见的替代字体 */
+  padding: 3px 0;
+  text-align: center;
+  width: 100%;
+  font-size: 55px !important;
+  margin-top: 2px; /* 增加與內容之間的距離 */
+  border-bottom: 1px solid #ccc; /* 頁腳頂部的分割線 */
+}
+
+
+/* 頁面底部樣式 */
+.footer {
+  background-color: #fff; /* 淺色背景 */
+  color: #333; /* 字體顏色為深色 */
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px; /* 增加與內容之間的距離 */
+  border-top: 2px solid #ccc; /* 頁腳頂部的分割線 */
+}
+
+.footer a {
+  color: #345e6c; /* 超連結顏色 */
+  text-decoration: none; /* 移除超連結下劃線 */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* 滑鼠懸停時顯示下劃線 */
+}
+
+.footer-content {
+  max-width: 1200px; /* 設定最大寬度 */
+  margin: 0 auto; /* 內容居中 */
+}
+
+@media (max-width: 600px) {
+  .footer {
+      padding: 5px 0; /* 在小螢幕上縮小內邊距 */
+  }
+}
+
+/* 移除默認的下划線 */
+a {
+  text-decoration: none;
+  color: #007bff; /* 設置默認的鏈接顏色 */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* 添加平滑過渡效果 */
+}
+
+/* 鼠標懸停效果 */
+a:hover {
+  color: #0056b3; /* 懸停時改變顏色 */
+  border-bottom: 2px solid #0056b3; /* 添加底部邊框作為替代的視覺效果 */
+}
+
+/* 點擊時的效果 */
+a:active {
+  color: #003f7f; /* 點擊時改變顏色 */
+  border-bottom: 2px solid #003f7f;
+}
+
+/* 針對訪問過的鏈接 */
+a:visited {
+  color: #6c757d; /* 訪問過的鏈接顏色 */
+}
+
+
+
+
+
